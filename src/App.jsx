@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link  } from 'react-router-dom';
 import Home from './components/home';
 import Posts from './components/posts';
 import Profile from './components/profile';
+import PostItem from './components/postitem';
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
         </header>
         <Routes>
           <Route path='posts' element={<Posts/>}/>
+          <Route path='posts/:id' element={<PostItem/>}/>
           <Route path='profile' element={<Profile/>}/>
           <Route path='/' element={<Home/>}/>
         </Routes>
