@@ -40,6 +40,11 @@ const App = () => {
             </>
           }/> */}
           <Route path='/' element={<Home/>}/>
+          <Route path="*" element={
+            <>
+                <h1>Sorry nothing found</h1>
+            </>
+          }/>
         </Routes>
       </div>
     </BrowserRouter>
