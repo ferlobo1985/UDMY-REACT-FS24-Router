@@ -5,6 +5,10 @@ import Posts from './components/posts';
 import Profile from './components/profile';
 import PostItem from './components/postitem';
 
+import Users from './components/users';
+import Guests from './components/guests';
+import Admins from './components/admins';
+
 
 const App = () => {
   return(
@@ -28,6 +32,9 @@ const App = () => {
             <li className='nav-item'>
               <NavLink to="profile" className='nav-link'>Profile</NavLink>
             </li>
+            <li className='nav-item'>
+              <NavLink to="users" className='nav-link'>Users</NavLink>
+            </li>
           </ul>
         </header>
         <Routes>
@@ -39,6 +46,10 @@ const App = () => {
                <Navigate replace to="/"/>
             </>
           }/> */}
+          <Route path="users" element={<Users/>}>
+            <Route path='guests' element={<Guests/>}/>
+            <Route path='admins' element={<Admins/>}/>
+          </Route>
           <Route path='/' element={<Home/>}/>
           <Route path="*" element={
             <>
