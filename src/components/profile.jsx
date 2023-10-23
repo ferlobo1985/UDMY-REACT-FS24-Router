@@ -5,7 +5,7 @@ const Profile = () => {
   const [searchParams] = useSearchParams();
 
   //http://localhost:5173/profile?profile=true#francis
-  console.log(searchParams)
+  console.log(searchParams.get('profile'))
 
     return(
       <>
